@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang = "en">
+<meta charset = "utf-8">
+<title>WEB MAP WITH CUSTOMISED POP-UPS</title>
+<link rel="stylesheet" href="leaflet.css" />
+</head>
+<body>
+<div id="map" style="width: 1358px; height: 640px"></div>
+<script src="leaflet.js"></script>
+<script>
+//Initialize map
+var map = L.map('map',{ center: [-1.3518,36.6566], zoom: 14});
+//Add openstreet map tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+//Add points
+var home = L.marker([-1.353924, 36.659158]).addTo(map);
+var pri_school = L.marker([-1.355722, 36.657975]).addTo(map);
+//var mall = L.marker([-1.358185, 36.657028]).addTo(map);
+//var naivas = L.marker([-1.360963, 36.656540]).addTo(map);
+//var soccerpitch = L.marker([-1.366603, 36.658529]).addTo(map);
+//var busstation = L.marker([-1.360399, 36.656346]).addTo(map);
+//var gym = L.marker([-1.361405, 36.655415]).addTo(map);
+//popups
+home.bindPopup("<h3>BLUE HEIGHTS APARTMENTS</h3><br><p>Two and Three bedroom Apartmets<br>Managed by: Naths and Friends<br>Contact: nathnf@gmail.com</p>");
+pri_school.bindPopup("<h3>PCEA Enchoro Emuny Primary School</h3><p><br>Grade 1 - Grade 6<br>Contact: eemunyprisch@gmail.com</p>");
+</script>
+</body>
+</html>
